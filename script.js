@@ -1,9 +1,10 @@
 let i = 0;
 
-function testClick(event){
-    if(alreadyMarked(event)){
+function clickedGrid(event){
+    let theGrid= document.getElementById("gridContainer");  
+    if(alreadyMarked(event) || checkForWinner(theGrid)){
         return;
-    }else{
+    }else{        
     if(i % 2 === 0){
         event.target.innerHTML ="X";
     }else{
@@ -11,10 +12,9 @@ function testClick(event){
     }  
     i++;
     }
-    let theGrid= document.getElementById("gridContainer");
-  
-    checkForWinner(theGrid);
+    checkForWinner(theGrid);   
 }
+
 
 function alreadyMarked(event){
     if(event.target.innerHTML != ""){
@@ -25,39 +25,21 @@ function alreadyMarked(event){
 function checkForWinner(theGrid){
 
     for(var i = 0; i < 9; i++){
-       //console.log(theGrid.children[i].innerHTML);
-        //console.log(theGrid.children[i].id)
-
-        var thisGrid = theGrid.children[i].id;
-        console.log(thisGrid.charAt(1));
-
-        var thisValue = theGrid.children[i].innerHTML;
-        console.log(thisValue);
-
-        if(thisGrid.charAt(1) == 1){
-            
-        }
-
+       
         if(checkRows(theGrid)){
-            return;
+            console.log("vinnare på RAD");
+            return true;
         }
 
         if(checkColumns(theGrid)){
-            return;
+            console.log("vinnare på KOLUMN");
+            return true;
         }
 
         if(checkDiagonal(theGrid)){
-            return;
+            console.log("vinnare på DIAGONAL");
+            return true;
         }
-/* 
-        if(theGrid.children[0].innerHTML == theGrid.children[1].innerHTML && theGrid.children[2].innerHTML == theGrid.children[1].innerHTML){
-            console.log("vinnare på rad 1");
-            return;
-        } */
-
-
-    }
-
   
 }
 
