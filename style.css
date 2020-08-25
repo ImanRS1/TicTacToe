@@ -8,8 +8,48 @@
 }
 
 #gridContainer{
-    background-color: burlywood;
+    background-color:black;
     width: 500px;
     height: 500px;
     margin: auto;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'g11 g12 g13'
+                        'g21 g22 g23'
+                        'g31 g32 g33';
+    grid-gap: 5px;
+}
+
+#gridContainer > div {
+    background-color: white;
+    padding: 10px;
+  }
+
+#g11{
+    grid-area: g11;    
+}
+#g12{
+    grid-area: g12;
+}
+#g13{
+    grid-area: g13;
+}
+#g21{
+    grid-area: g21;
+}
+#g22{
+    grid-area: g22;
+}
+#g23{
+    grid-area: g23;
+}
+#g31{
+    grid-area: g31;
+}
+#g32{
+    grid-area: g32;
+}
+#g33{
+    grid-area: g33;
 }
