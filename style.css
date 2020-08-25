@@ -9,25 +9,32 @@
 
 #gridContainer{
     background-color:black;
-    width: 500px;
-    height: 500px;
+    width: 585px;
+    height: 585px;
     margin: auto;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'g11 g12 g13'
-                        'g21 g22 g23'
-                        'g31 g32 g33';
+                         'g21 g22 g23'
+                         'g31 g32 g33';
     grid-gap: 5px;
+    font-size: 180px;
 }
 
 #gridContainer > div {
-    background-color: white;
-    padding: 10px;
+    background-color: white;    
+    width: 192px;
+    height: 192px;
   }
 
+#g11, #g12, #g13, #g21, #g22, #g23, #g31, #g32, #g33{
+    box-sizing: border-box;
+    padding-left: 30px;
+} 
+
 #g11{
-    grid-area: g11;    
+    grid-area: g11;
 }
 #g12{
     grid-area: g12;
