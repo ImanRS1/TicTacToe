@@ -1,0 +1,15 @@
+#mainContainer{
+    background-color: antiquewhite;
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    padding-top: 150px;
+    box-sizing: border-box;
+}
+
+#gridContainer{
+    background-color: burlywood;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
