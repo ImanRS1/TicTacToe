@@ -2,7 +2,7 @@ let i = 0;
 
 function clickedGrid(event){
     let theGrid= document.getElementById("gridContainer");  
-    if(alreadyMarked(event) || checkForWinner(theGrid)){
+    if(alreadyMarked(event) || checkForWinner(theGrid) || checkForDraw(i, theGrid)){
         return;
     }else{        
     if(i % 2 === 0){
@@ -15,6 +15,12 @@ function clickedGrid(event){
     checkForWinner(theGrid);   
 }
 
+
+function checkForDraw(i, theGrid){
+    if(i == 8 && checkForWinner(theGrid) != true){
+        console.log("DRAW");
+    }
+}
 
 function alreadyMarked(event){
     if(event.target.innerHTML != ""){
@@ -82,4 +88,5 @@ function checkDiagonal(theGrid){
         console.log("vinnare på diagonal pekades åt höger");
         return true;
     }
+}
 }
