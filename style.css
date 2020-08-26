@@ -39,8 +39,8 @@ body{
 #gridContainer{
     grid-area: gridContainer;
     background-color:rgb(190, 50, 255);
-    width: 585px;
-    height: 585px;
+    width: 595px;
+    height: 595px;
     /* margin: auto; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -48,7 +48,7 @@ body{
     grid-template-areas: 'g11 g12 g13'
                          'g21 g22 g23'
                          'g31 g32 g33';
-    grid-gap: 5px;
+    grid-gap: 10px;
     font-size: 180px;
     border: 10px solid greenyellow;
 }
@@ -118,7 +118,7 @@ body{
 #winHistory{
     grid-area: winHistory;
     width: 190px;
-    height: 585px;
+    height: 590px;
     background-color: rgb(0, 2, 136);
     margin: auto;
     border: 10px solid greenyellow;
