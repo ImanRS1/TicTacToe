@@ -1,5 +1,25 @@
+body{
+    background-color: rgb(0, 0, 78);
+    margin: 0;
+}
+
+.bPic{
+    position: absolute; 
+    z-index: -999;
+   
+    
+}
+
+.bPic img{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.2;
+    
+}
+
 #mainContainer{
-    background-color: antiquewhite;
+    background-color: rgba(66, 159, 235, 0.8);
     width: 1200px;
     height: 100vh;
     margin: auto;
@@ -18,7 +38,7 @@
 
 #gridContainer{
     grid-area: gridContainer;
-    background-color:black;
+    background-color:rgb(190, 50, 255);
     width: 585px;
     height: 585px;
     /* margin: auto; */
@@ -30,6 +50,7 @@
                          'g31 g32 g33';
     grid-gap: 5px;
     font-size: 180px;
+    border: 10px solid greenyellow;
 }
 
 #gridContainer > div {
@@ -74,14 +95,15 @@
 #winAnnouncer{
     grid-area: winAnnouncer;
     width:  685px;
-    height: 120px;
+    height: 100px;
     background-color: cadetblue;
-    font-size: 100px;
+    font-size: 80px;
     align-items: center;
     justify-content: center;
     display: flex;
     align-self: center;
     justify-self: center;
+    border: 10px solid greenyellow;
 }
 
 #resetButton{
@@ -90,12 +112,14 @@
     height: 100px;
     background-color: crimson;
     margin: auto;
+    border: 10px solid greenyellow;
 }
 
 #winHistory{
     grid-area: winHistory;
     width: 190px;
     height: 585px;
-    background-color: darkgreen;
+    background-color: rgb(0, 2, 136);
     margin: auto;
+    border: 10px solid greenyellow;
 }
