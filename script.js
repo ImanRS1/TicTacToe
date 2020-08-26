@@ -1,4 +1,5 @@
 let i = 0;
+let winAnnouncer = document.getElementById("winAnnouncer");
 
 function clickedGrid(event){
     let theGrid= document.getElementById("gridContainer");  
@@ -18,6 +19,7 @@ function clickedGrid(event){
 
 function checkForDraw(i, theGrid){
     if(i == 8 && checkForWinner(theGrid) != true){
+        winAnnouncer.innerHTML = "Draw!";
         console.log("DRAW");
     }
 }
@@ -28,22 +30,33 @@ function alreadyMarked(event){
     }
 }
 
+function announceWinner(){
+    if(i % 2 === 0){
+        winAnnouncer.innerHTML = "Winner is: O";
+    }else{
+        winAnnouncer.innerHTML = "Winner is: X";
+    }
+}
+
 function checkForWinner(theGrid){
 
     for(var i = 0; i < 9; i++){
        
         if(checkRows(theGrid)){
             console.log("vinnare på RAD");
+            announceWinner();
             return true;
         }
 
         if(checkColumns(theGrid)){
             console.log("vinnare på KOLUMN");
+            announceWinner();
             return true;
         }
 
         if(checkDiagonal(theGrid)){
             console.log("vinnare på DIAGONAL");
+            announceWinner();
             return true;
         }
   
