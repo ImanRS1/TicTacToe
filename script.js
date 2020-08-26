@@ -1,8 +1,10 @@
 let i = 0;
 let winAnnouncer = document.getElementById("winAnnouncer");
 
-function clickedGrid(event){
-    let theGrid= document.getElementById("gridContainer");  
+let theGrid= document.getElementById("gridContainer");  
+
+function clickedGrid(event){ 
+    console.log(i);
     if(alreadyMarked(event) || checkForWinner(theGrid) || checkForDraw(i, theGrid)){
         return;
     }else{        
@@ -14,6 +16,16 @@ function clickedGrid(event){
     i++;
     }
     checkForWinner(theGrid);   
+}
+
+function resetGrid(){
+    /* let test = theGrid.children[1].innerHTML; */
+    for(var x=0; x < theGrid.children.length; x++){
+        theGrid.children[x].innerHTML = "";
+    }
+    winAnnouncer.innerHTML = "Lets play!";
+    i = 0;
+/*    console.log(theGrid.children.length); */
 }
 
 
@@ -50,8 +62,8 @@ function checkForWinner(theGrid){
         if(checkDiagonal(theGrid)){
             announceWinner();
             return true;
-        }
-  
+        }  
+    }
 }
 
 function checkRows(theGrid){
@@ -85,5 +97,4 @@ function checkDiagonal(theGrid){
     if(theGrid.children[6].innerHTML == theGrid.children[4].innerHTML && theGrid.children[4].innerHTML == theGrid.children[2].innerHTML && theGrid.children[2].innerHTML != ""){
         return true;
     }
-}
 }

@@ -74,7 +74,7 @@
 #winAnnouncer{
     grid-area: winAnnouncer;
     width:  685px;
-    height: 100px;
+    height: 120px;
     background-color: cadetblue;
     font-size: 100px;
     align-items: center;
