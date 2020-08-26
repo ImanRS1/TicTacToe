@@ -19,13 +19,11 @@ function clickedGrid(event){
 }
 
 function resetGrid(){
-    /* let test = theGrid.children[1].innerHTML; */
     for(var x=0; x < theGrid.children.length; x++){
         theGrid.children[x].innerHTML = "";
     }
     winAnnouncer.innerHTML = "Lets play!";
     i = 0;
-/*    console.log(theGrid.children.length); */
 }
 
 
