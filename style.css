@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(0, 0, 78);
+    background-color: rgb(1, 1, 54);
     margin: 0;
 }
 
@@ -14,15 +14,17 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    opacity: 0.2;
+    opacity: 0.1;
     
 }
 
 #mainContainer{
-    background-color: rgba(66, 159, 235, 0.8);
+    /* background-color: rgba(66, 159, 235, 0.8); */
+    background-image: url(brickwall2.jpg);
     width: 1200px;
-    height: 100vh;
+    height: 850px;
     margin: auto;
+    margin-top: 25px;
     padding-top: 25px;
     box-sizing: border-box;
     display: grid;
@@ -34,6 +36,7 @@ body{
                         '. gridContainer gridContainer gridContainer winHistory winHistory'
                         '. gridContainer gridContainer gridContainer winHistory winHistory'
                         '. . . . . .'  ;
+                        
 }
 
 #gridContainer{
@@ -50,11 +53,13 @@ body{
                          'g31 g32 g33';
     grid-gap: 10px;
     font-size: 180px;
-    border: 10px solid greenyellow;
+    margin-top: 35px;
+    border-radius: 0.1rem;
+    font-family: neon;
 }
 
 #gridContainer > div {
-    background-color: white;    
+    background-image: url(brickwall2.jpg); 
     width: 192px;
     height: 192px;
   }
@@ -96,30 +101,91 @@ body{
     grid-area: winAnnouncer;
     width:  685px;
     height: 100px;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     font-size: 80px;
     align-items: center;
     justify-content: center;
     display: flex;
     align-self: center;
     justify-self: center;
-    border: 10px solid greenyellow;
+    font-family: neon;
+    color:rgb(190, 50, 255);
 }
 
 #resetButton{
     grid-area: resetButton;
-    width: 190px;
+    width: 100px;
     height: 100px;
     background-color: crimson;
     margin: auto;
-    border: 10px solid greenyellow;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-family: neon;
 }
 
 #winHistory{
     grid-area: winHistory;
     width: 190px;
-    height: 590px;
-    background-color: rgb(0, 2, 136);
+    height: 590px;/* 
+    background-color: rgb(0, 2, 136); */
     margin: auto;
-    border: 10px solid greenyellow;
+    margin-top: 35px;
+}
+
+@font-face{
+    font-family: neon;
+    src: url(NeonTubes2.otf);
+}
+
+.neon-text-purpule{
+    text-shadow: 
+  .1vw 0vw .25vw #cc75ff, .2vw 0vw .25vw #cc75ff, .4vw 0vw .25vw #cc75ff, 
+  .1vw 0vw   0vw #b735df, .2vw 0vw   0vw #b735df, .4vw 0vw   0vw #b735df,
+  .1vw 0vw  .1vw #b735df, .2vw 0vw  .1vw #b735df, .4vw 0vw  .1vw #b735df,
+  .1vw 0vw   2vw #b735df, .2vw 0vw   2vw #b735df, .4vw 0vw   2vw #b735df, 
+  .1vw 0vw   1vw #7d00a3, .2vw 0vw   1vw #7d00a3, .4vw 0vw   1vw #7d00a3, 
+  .1vw 0vw   1vw #7d00a3, .2vw 0vw  1vw #7d00a3, .4vw 0vw  5vw #7d00a3,
+  .1vw 0vw  1vw #7d00a3, .2vw 0vw  10vw #7d00a3, .4vw 0vw  5vw #7d00a3;
+}
+.neon-text-blue{
+    text-shadow: 
+  .1vw 0vw .25vw #757eff, .2vw 0vw .25vw #757eff, .4vw 0vw .25vw #757eff, 
+  .1vw 0vw   0vw #3546df, .2vw 0vw   0vw #3546df, .4vw 0vw   0vw #3546df,
+  .1vw 0vw  .1vw #3546df, .2vw 0vw  .1vw #3546df, .4vw 0vw  .1vw #3546df,
+  .1vw 0vw   2vw #3546df, .2vw 0vw   2vw #3546df, .4vw 0vw   2vw #3546df, 
+  .1vw 0vw   1vw #0003a3, .2vw 0vw   1vw #0003a3, .4vw 0vw   1vw #0003a3, 
+  .1vw 0vw   1vw #0003a3, .2vw 0vw  1vw #0003a3, .4vw 0vw  5vw #0003a3,
+  .1vw 0vw  1vw #0003a3, .2vw 0vw  10vw #0003a3, .4vw 0vw  5vw #0003a3;
+}
+
+.neon-wrapper-red{
+    box-shadow: 0 0 0.1vw  0.4vw #fff7f7,   
+    0 0 0.4vw  0.6vw #e97272, 
+    0 0   4vw  0.4vw #e50b0b,
+    inset 0 0 1.5vw  0.4vw #e50b0b,
+    inset 0 0 0.4vw  0.2vw #e97272,
+    inset 0 0 0.5vw  0.2vw #fff7f7;
+    border-radius: 50%;
+}
+
+.neon-wrapper-blue{
+    box-shadow: 0 0 0.1vw  0.4vw #fff7f7,   
+    0 0 0.4vw  0.6vw #7a72e9, 
+    0 0   4vw  0.4vw #210be5,
+    inset 0 0 1.5vw  0.4vw #0b1ae5,
+    inset 0 0 0.4vw  0.2vw #7472e9,
+    inset 0 0 0.5vw  0.2vw #fff7f7;
+    border-radius: 1.5rem;
+}
+
+.neon-wrapper-green{
+    box-shadow: 0 0 0.1vw  0.4vw #fff7f7,   
+    0 0 0.4vw  0.6vw #72e97c, 
+    0 0   4vw  0.4vw #0be54c,
+    inset 0 0 1.5vw  0.4vw #0be528,
+    inset 0 0 0.4vw  0.2vw #72e986,
+    inset 0 0 0.5vw  0.2vw #f7fff7;
+    border-radius: 1.5rem;
 }

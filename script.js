@@ -22,14 +22,14 @@ function resetGrid(){
     for(var x=0; x < theGrid.children.length; x++){
         theGrid.children[x].innerHTML = "";
     }
-    winAnnouncer.innerHTML = "Lets play!";
+    winAnnouncer.innerHTML = "Lets play";
     i = 0;
 }
 
 
 function checkForDraw(i, theGrid){
     if(i == 8 && checkForWinner(theGrid) != true){
-        winAnnouncer.innerHTML = "Draw!";
+        winAnnouncer.innerHTML = "Draw";
     }
 }
 
@@ -41,9 +41,9 @@ function alreadyMarked(event){
 
 function announceWinner(){
     if(i % 2 === 0){
-        winAnnouncer.innerHTML = "Winner is: O";
+        winAnnouncer.innerHTML = "Winner is O";
     }else{
-        winAnnouncer.innerHTML = "Winner is: X";
+        winAnnouncer.innerHTML = "Winner is X";
     }
 }
 
