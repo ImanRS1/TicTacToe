@@ -120,12 +120,19 @@ body{
     height: 100px;
     background-color: crimson;
     margin: auto;
-    display: flex;
-    
+    display: flex;    
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
     font-family: neon;
     color: white;
+}
+
+#resetButton:hover{
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 #winHistory{
@@ -146,6 +153,27 @@ body{
 }
 #xWins, #oWins{
     margin-left: 20px;
+}
+
+.pulser{
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse{
+    0% {
+        background-color: crimson;
+        color: white;
+    }
+    50% {
+        background-color: rgb(104, 9, 9);
+        color: black;
+    }
+    100% {
+        background-color: crimson;
+        color: white;
+    }
 }
 
 @font-face{
@@ -192,7 +220,6 @@ body{
     inset 0 0 1.5vw  0.4vw #e50b0b,
     inset 0 0 0.4vw  0.2vw #e97272,
     inset 0 0 0.5vw  0.2vw #fff7f7;
-    border-radius: 50%;
 }
 
 .neon-wrapper-blue{

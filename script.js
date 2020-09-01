@@ -5,7 +5,8 @@ let oWins = 0;
 let xWins = 0;
 let winAnnouncer = document.getElementById("winAnnouncer");
 let winTracker = document.getElementById("winHistory");
-let theGrid= document.getElementById("gridContainer");  
+let theGrid = document.getElementById("gridContainer");  
+let resetButton = document.getElementById("resetButton");
 
 function clickedGrid(event){ 
     console.log(i);
@@ -31,6 +32,7 @@ function resetGrid(){
     winAnnouncer.innerHTML = "Lets play";
     i = 0;
     y++;
+    resetBAnimation();
 }
 
 
@@ -54,6 +56,7 @@ function announceWinner(){
             winTracker.children[2].innerHTML = "O wins: " + oWins;
             x++;
         }
+        resetBAnimation();
     }else{
         winAnnouncer.innerHTML = "Winner is X";
         if(x == y){
@@ -61,6 +64,15 @@ function announceWinner(){
             winTracker.children[1].innerHTML = "X wins: " + xWins;
             x++;
         }
+        resetBAnimation();
+    }
+}
+
+function resetBAnimation(){
+    if(resetButton.classList.contains("pulser")){
+        resetButton.classList.remove("pulser");
+    }else{
+        resetButton.classList.add("pulser");
     }
 }
 
