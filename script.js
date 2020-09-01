@@ -29,6 +29,10 @@ function clickedGrid(event){
 }
 
 function resetGrid(){
+    if(checkForWinner(theGrid) || checkForDraw(i, theGrid)){
+        y++;       
+        startStopButtonAnimation();
+    }
     for(var x=0; x < theGrid.children.length; x++){
         theGrid.children[x].innerHTML = "";
         theGrid.children[x].removeAttribute("class", "neon-text-red");
@@ -36,14 +40,13 @@ function resetGrid(){
     }
     winAnnouncer.innerHTML = "Lets play";
     i = 0;
-    y++;
-    resetBAnimation();
 }
 
 
 function checkForDraw(i, theGrid){
     if(i == 8 && checkForWinner(theGrid) != true){
         winAnnouncer.innerHTML = "Draw";
+        startStopButtonAnimation();
     }
 }
 
@@ -61,7 +64,7 @@ function announceWinner(){
             winTracker.children[2].innerHTML = "O wins: " + oWins;
             x++;
         }
-        resetBAnimation();
+        startStopButtonAnimation();
     }else{
         winAnnouncer.innerHTML = "Winner is X";
         if(x == y){
@@ -69,11 +72,11 @@ function announceWinner(){
             winTracker.children[1].innerHTML = "X wins: " + xWins;
             x++;
         }
-        resetBAnimation();
+        startStopButtonAnimation();
     }
 }
 
-function resetBAnimation(){
+function startStopButtonAnimation(){
     if(resetButton.classList.contains("pulser")){
         resetButton.classList.remove("pulser");
     }else{
