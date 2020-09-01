@@ -1,6 +1,10 @@
 let i = 0;
+let x = 0;
+let y = 0;
+let oWins = 0;
+let xWins = 0;
 let winAnnouncer = document.getElementById("winAnnouncer");
-
+let winTracker = document.getElementById("winHistory");
 let theGrid= document.getElementById("gridContainer");  
 
 function clickedGrid(event){ 
@@ -26,6 +30,7 @@ function resetGrid(){
     }
     winAnnouncer.innerHTML = "Lets play";
     i = 0;
+    y++;
 }
 
 
@@ -44,8 +49,18 @@ function alreadyMarked(event){
 function announceWinner(){
     if(i % 2 === 0){
         winAnnouncer.innerHTML = "Winner is O";
+        if(x == y){
+            oWins++;
+            winTracker.children[2].innerHTML = "O wins: " + oWins;
+            x++;
+        }
     }else{
         winAnnouncer.innerHTML = "Winner is X";
+        if(x == y){
+            xWins++;
+            winTracker.children[1].innerHTML = "X wins: " + xWins;
+            x++;
+        }
     }
 }
 
