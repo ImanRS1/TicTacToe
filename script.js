@@ -11,6 +11,9 @@ let resetButton = document.getElementById("resetButton");
 function clickedGrid(event){ 
     console.log(i);
     if(alreadyMarked(event) || checkForWinner(theGrid) || checkForDraw(i, theGrid)){
+        if(checkForWinner(theGrid)){
+            announceWinner();
+        }
         return;
     }else{        
     if(i % 2 === 0){
@@ -20,7 +23,9 @@ function clickedGrid(event){
     }  
     i++;
     }
-    checkForWinner(theGrid);   
+    if(checkForWinner(theGrid)){
+        announceWinner();
+    }   
 }
 
 function resetGrid(){
@@ -79,15 +84,12 @@ function resetBAnimation(){
 function checkForWinner(theGrid){
     for(var i = 0; i < 9; i++){       
         if(checkRows(theGrid)){
-            announceWinner();
             return true;
         }
         if(checkColumns(theGrid)){
-            announceWinner();
             return true;
         }
         if(checkDiagonal(theGrid)){
-            announceWinner();
             return true;
         }  
     }
