@@ -131,12 +131,21 @@ body{
 #winHistory{
     grid-area: winHistory;
     width: 220px;
-    height: 300px;
-    
+    height: 300px;    
     justify-self: center;
     align-self: center;
     font-size: 30px;
     color: white;
+    font-family: neon;
+}
+
+#wHead{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#xWins, #oWins{
+    margin-left: 20px;
 }
 
 @font-face{
