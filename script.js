@@ -18,10 +18,11 @@ function clickedGrid(event){
     }else{        
     if(i % 2 === 0){
         event.target.innerHTML ="X";
+        i++;
     }else{
         event.target.innerHTML ="O";
+        i++;
     }  
-    i++;
     }
     if(checkForWinner(theGrid)){
         announceWinner();
@@ -29,8 +30,11 @@ function clickedGrid(event){
 }
 
 function resetGrid(){
+    i--;
+    console.log("värdet på i inne i resetfunk " + i);
     if(checkForWinner(theGrid) || checkForDraw(i, theGrid)){
         y++;       
+        console.log("y är " + y);
         startStopButtonAnimation();
     }
     for(var x=0; x < theGrid.children.length; x++){
@@ -46,7 +50,9 @@ function resetGrid(){
 function checkForDraw(i, theGrid){
     if(i == 8 && checkForWinner(theGrid) != true){
         winAnnouncer.innerHTML = "Draw";
+        console.log("värdet på i " + i);
         startStopButtonAnimation();
+
     }
 }
 
