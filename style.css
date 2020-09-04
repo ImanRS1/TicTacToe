@@ -408,19 +408,19 @@ body{
         'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
         'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
         'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
-        'winHistory winHistory winHistory winHistory . resetButton'  ;
+        '. winHistory winHistory . resetButton .'  ;
     }
 
     #winHistory{
         width: 150px;
         height: 120px;    
         font-size: 20px;
-        margin-left: 10px;
+        margin-left: 50px;
         margin-bottom: 10px;
     }
 
     #resetButton{
-        margin-right: 5px;
+        margin-left: 50px;
         margin-bottom: 20px;
     }
 
