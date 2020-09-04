@@ -8,6 +8,8 @@ let winTracker = document.getElementById("winHistory");
 let theGrid = document.getElementById("gridContainer");  
 let resetButton = document.getElementById("resetButton");
 
+//test
+
 function clickedGrid(event){ 
     console.log(i);
     if(alreadyMarked(event) || checkForWinner(theGrid) || checkForDraw(i, theGrid)){
