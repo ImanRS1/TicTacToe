@@ -8,14 +8,9 @@ let winTracker = document.getElementById("winHistory");
 let theGrid = document.getElementById("gridContainer");  
 let resetButton = document.getElementById("resetButton");
 
-//testny
 
-function clickedGrid(event){ 
-    console.log(i);
-    if(alreadyMarked(event) || checkForWinner(theGrid) || checkForDraw(i, theGrid)){
-        if(checkForWinner(theGrid)){
-            announceWinner();
-        }
+function clickedGrid(event){
+    if(alreadyMarked(event) || checkForDraw(i, theGrid) || checkForWinner(theGrid)){
         return;
     }else{        
     if(i % 2 === 0){
@@ -33,10 +28,8 @@ function clickedGrid(event){
 
 function resetGrid(){
     i--;
-    console.log("värdet på i inne i resetfunk " + i);
     if(checkForWinner(theGrid) || checkForDraw(i, theGrid)){
         y++;       
-        console.log("y är " + y);
         startStopButtonAnimation();
     }
     for(var x=0; x < theGrid.children.length; x++){
@@ -52,9 +45,7 @@ function resetGrid(){
 function checkForDraw(i, theGrid){
     if(i == 8 && checkForWinner(theGrid) != true){
         winAnnouncer.innerHTML = "Draw";
-        console.log("värdet på i " + i);
         startStopButtonAnimation();
-
     }
 }
 
@@ -104,6 +95,7 @@ function checkForWinner(theGrid){
             return true;
         }  
     }
+    return false;
 }
 
 function checkRows(theGrid){
