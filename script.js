@@ -8,7 +8,7 @@ let winTracker = document.getElementById("winHistory");
 let theGrid = document.getElementById("gridContainer");  
 let resetButton = document.getElementById("resetButton");
 
-//test
+//testny
 
 function clickedGrid(event){ 
     console.log(i);
