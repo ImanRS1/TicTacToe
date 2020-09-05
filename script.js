@@ -37,7 +37,7 @@ function resetGrid(){
         theGrid.children[x].removeAttribute("class", "neon-text-red");
         theGrid.children[x].setAttribute("class", "neon-text-blue");
     }
-    winAnnouncer.innerHTML = "Lets play";
+    winAnnouncer.innerHTML = "Let's play";
     i = 0;
 }
 
