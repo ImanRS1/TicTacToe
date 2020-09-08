@@ -60,7 +60,7 @@ function announceWinner(){
         winAnnouncer.innerHTML = "Winner is O";
         if(x == y){
             oWins++;
-            winTracker.children[2].innerHTML = "O wins: " + oWins;
+            winTracker.children[2].innerHTML = "O wins: " + "<span class='neon-text-red'>" + oWins + "</span>";
             x++;
         }
         startStopButtonAnimation();
@@ -68,7 +68,7 @@ function announceWinner(){
         winAnnouncer.innerHTML = "Winner is X";
         if(x == y){
             xWins++;
-            winTracker.children[1].innerHTML = "X wins: " + xWins;
+            winTracker.children[1].innerHTML = "X wins: " + "<span class='neon-text-red'>" + xWins + "</span>";
             x++;
         }
         startStopButtonAnimation();
