@@ -58,7 +58,7 @@ body{
     background-image: url(brickwall2.jpg); 
     width: 192px;
     height: 192px;
-  }
+}
 
 #g11, #g12, #g13, #g21, #g22, #g23, #g31, #g32, #g33{
     box-sizing: border-box;
