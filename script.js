@@ -57,7 +57,7 @@ function alreadyMarked(event){
 
 function announceWinner(){
     if(i % 2 === 0){
-        winAnnouncer.innerHTML = "Winner is O";
+        winAnnouncer.innerHTML = "<span class='neon-text-red'>" + "Winner is O" + "</span>";
         if(x == y){
             oWins++;
             winTracker.children[2].innerHTML = "O wins: " + "<span class='neon-text-red'>" + oWins + "</span>";
@@ -65,7 +65,7 @@ function announceWinner(){
         }
         startStopButtonAnimation();
     }else{
-        winAnnouncer.innerHTML = "Winner is X";
+        winAnnouncer.innerHTML = "<span class='neon-text-red'>" + "Winner is X" + "</span>";
         if(x == y){
             xWins++;
             winTracker.children[1].innerHTML = "X wins: " + "<span class='neon-text-red'>" + xWins + "</span>";
