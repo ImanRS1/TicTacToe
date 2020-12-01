@@ -2,6 +2,7 @@ body{
     background-color: rgb(1, 1, 54);
     margin: 0;
     user-select: none;
+    background-image: url(brickwall2.jpg);
 }
 
 .bPic{
@@ -13,11 +14,11 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    opacity: 0.1;    
+    /* opacity: 0.1;   */  
 }
 
 #mainContainer{
-    background-image: url(brickwall2.jpg);
+    /* background-image: url(brickwall2.jpg); */
     width: 1200px;
     height: 850px;
     margin: auto;
