@@ -250,55 +250,55 @@ body{
 }
 
 @media screen and (max-width: 1230px) {
-    #mainContainer{
+   /*  #mainContainer{
         width: 97%;
-    }
+    } */
 
-    #gridContainer{
+    /* #gridContainer{
         width: 500px;
         height: 500px;
         font-size: 130px;
-    }
+    } */
 
-    #gridContainer > div {
+   /*  #gridContainer > div {
         width: 160px;
         height: 160px;
-    }
+    } */
 
-    #winAnnouncer{
+    /* #winAnnouncer{
         grid-area: winAnnouncer;
         width:  500px;
         height: 100px;
         font-size: 60px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1000px) {
-    #mainContainer{
+   /*  #mainContainer{
     grid-template-areas:'. winAnnouncer winAnnouncer winAnnouncer resetButton resetButton' 
     '. gridContainer gridContainer gridContainer gridContainer .'
     '. gridContainer gridContainer gridContainer gridContainer .'
     '. gridContainer gridContainer gridContainer gridContainer .'
     '. gridContainer gridContainer gridContainer gridContainer .'
     '. winHistory winHistory winHistory winHistory .'  ;    
-    }
+    } */
 
-    #winHistory{
+    /* #winHistory{
         width: 200px;
         height: 120px;    
         font-size: 20px;
-    }
+    } */
 
     #wHead{
         margin-bottom: 0px;
         margin-top: 15px;
     }
 
-    #xWins, #oWins{
+   /*  #xWins, #oWins{
         margin-left: 20px;
         margin-top: 5px;
         margin-bottom: 10px;
-    }    
+    }  */   
 }
 
 @media screen and (max-width: 780px) {
