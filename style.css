@@ -288,11 +288,11 @@ body{
         height: 120px;    
         font-size: 20px;
     } */
-
+/* 
     #wHead{
         margin-bottom: 0px;
         margin-top: 15px;
-    }
+    } */
 
    /*  #xWins, #oWins{
         margin-left: 20px;
@@ -301,49 +301,25 @@ body{
     }  */   
 }
 
+@media screen and (max-width: 814px) {
+    #mainContainer{
+        width: 97%;
+    }
+}
+
 @media screen and (max-width: 780px) {
     #gridContainer{
         margin: auto;
     }
 
-    #mainContainer{
+    /* #mainContainer{
         grid-template-areas:'. winAnnouncer winAnnouncer winAnnouncer winAnnouncer .' 
         '. gridContainer gridContainer gridContainer gridContainer .'
         '. gridContainer gridContainer gridContainer gridContainer .'
         '. gridContainer gridContainer gridContainer gridContainer .'
         '. gridContainer gridContainer gridContainer gridContainer .'
         ' winHistory winHistory winHistory winHistory resetButton .'  ;        
-    }
-}
-
-@media screen and (max-width: 655px) {
-    #winAnnouncer{
-        width:  400px;
-        height: 100px;
-        font-size: 60px;
-    }
-
-    #mainContainer{
-        grid-template-areas:'. winAnnouncer winAnnouncer winAnnouncer winAnnouncer .' 
-        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
-        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
-        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
-        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
-        'winHistory winHistory winHistory winHistory resetButton .'  ;        
-    }
-
-    #gridContainer{
-        margin: auto;
-    }
-}
-
-@media screen and (max-width: 560px) {
-    #winAnnouncer{
-        grid-area: winAnnouncer;
-        width:  300px;
-        height: 100px;
-        font-size: 45px;
-    }
+    } */
 
     #gridContainer{
         width: 370px;
@@ -357,13 +333,83 @@ body{
         height: 115px;
     }
 
-    #mainContainer{
-        height: 700px;
-    }  
+    #winHistory{
+        width: 170px;
+        height: 220px;    
+        font-size: 20px;
+    }
+}
 
+@media screen and (max-width: 655px) {
+    #winAnnouncer{
+        max-width:  400px;
+        height: 55px;
+        font-size: 40px;
+    }
+
+    #mainContainer{
+        grid-template-areas:'winAnnouncer winAnnouncer winAnnouncer winAnnouncer winAnnouncer winAnnouncer' 
+        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
+        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
+        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
+        'gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer'
+        'winHistory winHistory winHistory winHistory resetButton .'  ;        
+    }
+
+    #gridContainer{
+        margin: auto;
+    }
+
+    
+    #wHead{
+        margin-bottom: 0px;
+        margin-top: 5px;
+    } 
+
+    #xWins, #oWins{
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    #winHistory{
+        height: 100px;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    #resetButton{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* #winAnnouncer{
+        grid-area: winAnnouncer;
+        width:  300px;
+        height: 100px;
+        font-size: 45px;
+    } */
+
+    #gridContainer{
+        width: 370px;
+        height: 370px;
+        font-size: 90px;
+        margin: 15px auto;
+    }
+    
+    #gridContainer > div {
+        width: 115px;
+        height: 115px;
+    }
+
+    /* #mainContainer{
+        height: 700px;
+    } */  
+/* 
     #winHistory, #resetButton{
         margin-bottom: 45px;
-    }
+    } */
 }
 
 
