@@ -74,8 +74,11 @@ body{
 }
 
 #g11, #g12, #g13, #g21, #g22, #g23, #g31, #g32, #g33{
-    box-sizing: border-box;
-    padding-left: 30px;
+    /* box-sizing: border-box;
+    padding-left: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 #g11{
