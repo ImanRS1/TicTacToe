@@ -436,9 +436,7 @@ body{
         height: 85px;
       }
 
-    #g11, #g12, #g13, #g21, #g22, #g23, #g31, #g32, #g33{
-        padding-left: 15px;
-    }
+    
 
     #mainContainer{
         height: 550px;
@@ -452,10 +450,10 @@ body{
 
     #winHistory{
         width: 150px;
-        height: 120px;    
+        height: 100px;    
         font-size: 20px;
         margin-left: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     #resetButton{
