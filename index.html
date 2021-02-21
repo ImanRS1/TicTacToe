@@ -7,31 +7,27 @@
     <title>TicTacToe</title>
 </head>
 <body>
+    <div class="positionerDiv">
+        <div id="mainContainer" class="neon-wrapper-blue">
+            <div id="gridContainer" class="neon-wrapper-green">
+                <div id="g11" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g12" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g13" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g21" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g22" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g23" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g31" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g32" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+                <div id="g33" class="neon-text-blue" onclick="clickedGrid(event)"></div>
+            </div>
 
-  <!--   <div class="bPic">
-        <!-- <img src="images/backGround.jpg"> -->
-        <!-- <img src="brickwall2.jpg"> -->
-    </div>
- -->
-    <div id="mainContainer" class="neon-wrapper-blue">
-        <div id="gridContainer" class="neon-wrapper-green">
-            <div id="g11" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g12" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g13" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g21" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g22" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g23" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g31" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g32" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-            <div id="g33" class="neon-text-blue" onclick="clickedGrid(event)"></div>
-        </div>
-
-        <div id="winAnnouncer" class="neon-text-purpule neon-wrapper-green"> <p>Let's Play</p></div>
-        <div id="resetButton" class="neon-wrapper-red" onclick="resetGrid()"><p id="resetText">RESET</p></div>
-        <div id="winHistory" class="neon-wrapper-green neon-text-purpule">
-                <p id="wHead">Win History</p>
-                <p id="xWins">X wins: </p>
-                <p id="oWins">O wins: </p>       
+            <div id="winAnnouncer" class="neon-text-purpule neon-wrapper-green"> <p>Let's Play</p></div>
+            <div id="resetButton" class="neon-wrapper-red" onclick="resetGrid()"><p id="resetText">RESET</p></div>
+            <div id="winHistory" class="neon-wrapper-green neon-text-purpule">
+                    <p id="wHead">Win History</p>
+                    <p id="xWins">X wins: </p>
+                    <p id="oWins">O wins: </p>       
+            </div>
         </div>
     </div>
     
